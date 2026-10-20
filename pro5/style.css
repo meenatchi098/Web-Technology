@@ -1,0 +1,80 @@
+studentrecords{
+    display:block;
+    background:#eef5ff;
+    font-family:Arial, sans-serif;
+    padding:30px;
+}
+
+title{
+    display:block;
+    text-align:center;
+    font-size:36px;
+    font-weight:bold;
+    color:#003366;
+    margin-bottom:30px;
+    border-bottom:3px solid #003366;
+    padding-bottom:15px;
+}
+
+student{
+    display:block;
+    width:450px;
+    margin:25px auto;
+    padding:20px;
+    background:white;
+    border-left:8px solid #0066cc;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+photo{
+    display:block;
+    text-align:center;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+name{
+    display:block;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#003366;
+    margin-bottom:15px;
+}
+
+rollno,
+department,
+year,
+college,
+email{
+    display:block;
+    font-size:18px;
+    margin:8px 0;
+    color:#333;
+}
+
+rollno:before{
+    content:"Roll No : ";
+    font-weight:bold;
+}
+
+department:before{
+    content:"Department : ";
+    font-weight:bold;
+}
+
+year:before{
+    content:"Year : ";
+    font-weight:bold;
+}
+
+college:before{
+    content:"College : ";
+    font-weight:bold;
+}
+
+email:before{
+    content:"Email : ";
+    font-weight:bold;
+}
