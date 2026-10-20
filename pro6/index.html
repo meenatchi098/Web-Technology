@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Map Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        img {
+            width: 678px;
+            border: 4px solid #1e90ff;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Image Map Demonstration</h1>
+
+    <p>Click on the Laptop, Mouse, Bottle, Plants or Table Light.</p>
+
+    <img src="workspace.jpg"
+         usemap="#workmap"
+         alt="Workspace">
+
+    <map name="workmap">
+
+        <!-- Laptop -->
+        <area shape="poly"
+              coords="166,165,456,161,420,344,257,366"
+              href="https://en.wikipedia.org/wiki/Laptop"
+              alt="Laptop"
+              title="Laptop">
+
+        <!-- Mouse -->
+        <area shape="circle"
+              coords="417,380,42"
+              href="https://en.wikipedia.org/wiki/Computer_mouse"
+              alt="Mouse"
+              title="Mouse">
+
+
+        <!-- Water Bottle -->
+        <area shape="rect"
+              coords="224,190,275,312"
+              href="https://en.wikipedia.org/wiki/Water_bottle"
+              alt="Water Bottle"
+              title="Water Bottle">
+
+        <!-- Left Desk Plant -->
+        <area shape="circle"
+              coords="169,270,45"
+              href="https://en.wikipedia.org/wiki/Plant"
+              alt="Desk Plant"
+              title="Desk Plant">
+
+        <!-- Right Desk Plant -->
+        <area shape="rect"
+              coords="555,190,677,320"
+              href="https://en.wikipedia.org/wiki/Plant"
+              alt="Desk Plant"
+              title="Desk Plant">
+
+        <!-- Table Light -->
+        <area shape="circle"
+              coords="292,75,50"
+              href="https://en.wikipedia.org/wiki/Light_table"
+              alt="Table Light"
+              title="Table Light">
+
+        <!-- Pen Holder -->
+        <area shape="rect"
+              coords="480,267,514,340"
+              href="https://en.wikipedia.org/wiki/Penholder"
+              alt="Pen Holder"
+              title="Pen Holder">
+
+    </map>
+
+</body>
+</html>
