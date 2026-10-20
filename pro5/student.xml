@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<studentrecords>
+
+    <title>Student Information System</title>
+
+    <student>
+        <photo>👨‍🎓</photo>
+        <name>Rahul Sharma</name>
+        <rollno>101</rollno>
+        <department>MCA</department>
+        <year>II Year</year>
+        <college>ABC College</college>
+        <email>rahul@gmail.com</email>
+    </student>
+
+    <student>
+        <photo>👩‍🎓</photo>
+        <name>Priya Nair</name>
+        <rollno>102</rollno>
+        <department>MCA</department>
+        <year>II Year</year>
+        <college>ABC College</college>
+        <email>priya@gmail.com</email>
+    </student>
+
+    <student>
+        <photo>👨‍🎓</photo>
+        <name>Karthik S</name>
+        <rollno>103</rollno>
+        <department>MCA</department>
+        <year>II Year</year>
+        <college>ABC College</college>
+        <email>karthik@gmail.com</email>
+    </student>
+
+</studentrecords>
