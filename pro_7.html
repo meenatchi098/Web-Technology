@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>AngularJS Form Validation</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            background:#f0f8ff;
+        }
+
+        .container{
+            width:450px;
+            margin:40px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:darkblue;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:5px;
+            margin-bottom:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+
+        .error{
+            color:red;
+            font-size:14px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:royalblue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkblue;
+        }
+
+        .result{
+            margin-top:20px;
+            background:#e8ffe8;
+            border:2px solid green;
+            padding:15px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+
+<body ng-controller="myController">
+
+<div class="container">
+
+<h2>Student Registration Form</h2>
+
+<form name="myForm" ng-submit="submitForm()">
+
+<label>Name</label>
+<input type="text"
+       name="name"
+       ng-model="student.name"
+       required>
+
+<div class="error"
+     ng-show="myForm.name.$touched && myForm.name.$invalid">
+Name is required.
+</div>
+
+<label>Email</label>
+<input type="email"
+       name="email"
+       ng-model="student.email"
+       required>
+
+<div class="error"
+     ng-show="myForm.email.$touched && myForm.email.$invalid">
+Enter a valid email.
+</div>
+
+<label>Age</label>
+<input type="number"
+       name="age"
+       ng-model="student.age"
+       min="18"
+       max="60"
+       required>
+
+<div class="error"
+     ng-show="myForm.age.$touched && myForm.age.$invalid">
+Age must be between 18 and 60.
+</div>
+
+<br>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+<div class="result" ng-show="submitted">
+<h3>Registration Successful!</h3>
+
+<p><b>Name:</b> {{student.name}}</p>
+<p><b>Email:</b> {{student.email}}</p>
+<p><b>Age:</b> {{student.age}}</p>
+
+</div>
+
+</div>
+
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myController", function($scope){
+
+    $scope.submitted = false;
+
+    $scope.submitForm = function(){
+
+        if($scope.myForm.$valid){
+            $scope.submitted = true;
+        }
+
+    };
+
+});
+
+</script>
+
+</body>
+</html>
